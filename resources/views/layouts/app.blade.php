@@ -8,7 +8,10 @@
 <body>
 	@include('inc.topbar')
 	<div class="grid-container fluid">
+		@include('inc.flashMessage')
 		@yield('content')
 	</div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.js"></script>
 </body>
 </html>

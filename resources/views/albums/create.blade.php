@@ -17,8 +17,7 @@
 			<textarea name="description" placeholder="Album Description"></textarea>
 		</div>
 		<div class="row">
-			<label for="cover_image" class="button">Upload Image</label>
-			<input class="show-for-sr" type="file" name="cover_image">
+			<input class="button" type="file" name="cover_image" value="Upload Image">
 		</div>
 		<div class="row">
 			<input class="button" type="submit" value="Create">
