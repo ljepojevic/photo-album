@@ -1,26 +1,31 @@
 @extends('layouts.app')
 
 @section('content')
-	<h3>Create Album</h3>
-	<form method="POST" action="/albums/store" enctype="multipart/form-data">
+<div class="row">
+	<h3 class="mx-auto">Create Album</h3>
+</div>
+<div class="row">
+	<form method="POST" action="/albums/store" enctype="multipart/form-data" class="mx-auto">
 		@csrf
-		<div class="row">
-			<label for="name" class="small-3 columns">Name:</label>
-			<div class="small-5 columns">
-				<input type="text" name="name" placeholder="Album Name" class="right">
-				
-			</div>
+		<div class="form-group">
+			<label for="name">Name</label>
+			<input type="text" name="name" placeholder="Album Name" class="form-control">
 
 		</div>
-		<div class="row">
-			Description:
-			<textarea name="description" placeholder="Album Description"></textarea>
+		<div class="form-group">
+			<label for="description">Description</label>
+			<textarea name="description" placeholder="Album Description" class="form-control"></textarea>
 		</div>
-		<div class="row">
-			<input class="button" type="file" name="cover_image" value="Upload Image">
+		<div class="input-group mb-3">
+		  <div class="input-group-prepend">
+		    <span class="input-group-text">Upload Image</span>
+		  </div>
+		  <div class="custom-file">
+		    <input type="file" class="custom-file-input" id="coverImage" name="cover_image">
+		    <label class="custom-file-label" for="coverImage">Choose file</label>
+		  </div>
 		</div>
-		<div class="row">
-			<input class="button" type="submit" value="Create">
-		</div>
+		<input class="btn btn-primary" type="submit" value="Create">
 	</form>
+</div>
 @endsection

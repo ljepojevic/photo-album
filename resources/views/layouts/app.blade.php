@@ -3,15 +3,16 @@
 <head>
 	<meta charset="utf-8">
 	<title>Photoshow</title>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.css">
+	<link rel="stylesheet" href="/css/app.css">
 </head>
 <body>
 	@include('inc.topbar')
-	<div class="grid-container fluid">
+	<div class="container">
 		@include('inc.flashMessage')
 		@yield('content')
 	</div>
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.js"></script>
+<script src="/js/app.js"></script>
+<script>$('.carousel').carousel()</script>
 </body>
 </html>
